@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the moon</title>
+    <link rel="stylesheet" href="index.css" >
+    <script>
+        function showImage() {
+            // تصحيح: استخدام علامات الاقتباس حول img
+            document.querySelectorAll('img').forEach(img => img.style.display = 'none');
+            
+            // تصحيح: تعريف المتغير بشكل صحيح
+            var selectedValue = document.getElementById('imageselect').value;
+            
+            if (selectedValue) {
+                document.getElementById(selectedValue).style.display = 'block';
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #000000;
+        }
+        .select {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); /* تصحيح: لتوسيط العنصر بشكل صحيح */
+            width: 200px;
+        }
+        img {
+            display: none;
+            margin-top: 10px;
+        }
+        .im1{
+width: 120px;
+height: 120px;
+position: fixed;
+top: -150px;
+left: -30px;
+        }
+        .im2{
+width: 120px;
+height: 120px;
+position: fixed;
+top: -150px;
+left: -30px;
+        }
+        .im3{
+width: 115px;
+height: 85px;
+position: fixed;
+top: -150px;
+left: -30px;
+        }
+        .im4{
+width: 120px;
+height: 85px;
+position: fixed;
+top: -150px;
+left: -30px;
+        }
+        .im5{
+width: 120px;
+height: 120px;
+position: fixed;
+top: -150px;
+left: -30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="select" >
+        <!-- تصحيح: إضافة الدالة showImage إلى حدث onchange -->
+        <select id="imageselect" onchange="showImage()">
+            <option value="" ></option>
+            <option value="144p" >144p</option>
+            <option value="240p" >240p</option>
+            <option value="480p" >480p</option>
+            <option value="720p" >720p</option>
+            <option value="1080p" >1080p</option>
+        </select>
+        <img class="im1" id="144p" src="431273423_287717504217901_1524352753372499997_n.jpg" alt="صورة" >
+        <img class="im2" id="240p" src="430961754_780127197321287_5123274697404344413_n.jpg" alt="صورة" >
+        <img class="im3" id="480p" src="431266546_446351121170144_8747057970189561168_n.jpg" alt="صورة" >
+        <img class="im4" id="720p" src="430988200_742774774657859_3855347163508107354_n.jpg" alt="صورة" >
+        <img class="im5" id="1080p" src="" alt="صورة" >
+    </div>
+</body>
+</html>
+ 
